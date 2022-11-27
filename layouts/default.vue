@@ -19,4 +19,5 @@
     flex-direction: column
     align-items: center
     justify-content: space-between
+    font-family: 'Roboto'
 </style>

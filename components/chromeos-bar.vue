@@ -24,6 +24,7 @@ export default {
       display: flex
       justify-content: right
       align-items: center
+      margin-bottom: 54px
 
       *
         margin-right: 14px   

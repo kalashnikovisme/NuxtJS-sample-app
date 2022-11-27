@@ -1,11 +1,13 @@
 <template lang="pug">
   .main
-    = "tutorial"
+    search-input
 </template>
 
 <style lang="sass">
   .main
     width: 564px
+    padding-left: 20px
+    padding-right: 20px
     background-color: white
 </style>
 

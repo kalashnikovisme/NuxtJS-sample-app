@@ -39,6 +39,7 @@ export default {
       display: flex
       align-items: center
       padding-left: 18px
+      margin-top: 65px
 
       *:not(:first-child)
         margin-left: 32px
