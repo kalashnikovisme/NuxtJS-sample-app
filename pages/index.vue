@@ -1,7 +1,14 @@
 <template lang="pug">
   .main
     search-input
+    result-card
 </template>
+
+<script>
+export default {
+  name: 'IndexPage',
+}
+</script>
 
 <style lang="sass">
   .main
@@ -11,8 +18,3 @@
     background-color: white
 </style>
 
-<script>
-export default {
-  name: 'IndexPage',
-}
-</script>
