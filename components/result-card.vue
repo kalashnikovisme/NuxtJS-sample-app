@@ -11,8 +11,9 @@ v-card(
           height="134px"
         )
       .data
-        v-card-title {{ user.name }}
-        v-card-subtitle {{ user.title }}
+        v-card-title(style="padding-bottom: 0px") {{ user.name }}
+        span.title {{ user.title }}
+        span.address {{ user.address }}
         v-card-actions
           v-btn(
             text
@@ -42,6 +43,16 @@ export default {
     .main-info
       display: flex
       flex-direction: row
+
+      .data
+        display: flex
+        flex-direction: column
+
+        .title, .address
+          padding-left: 16px
+          font-size: 0.8rem
+        .title
+          font-weight: bold
 
     .email
       padding-top: 5px
