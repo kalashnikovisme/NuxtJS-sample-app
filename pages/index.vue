@@ -33,4 +33,14 @@ export default {
     padding-right: 20px
     background-color: white
     overflow-y: scroll
+    &::-webkit-scrollbar
+      width: 4px
+
+    &::-webkit-scrollbar-track
+      -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.3)
+
+    &::-webkit-scrollbar-thumb
+      border-radius: 2px
+      background: black
+      -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.5)
 </style>

@@ -8,8 +8,6 @@
 <style lang="sass">
   html
     overflow: hidden
-    ::-webkit-scrollbar
-      display: none
 
   .app
     width: 100vw

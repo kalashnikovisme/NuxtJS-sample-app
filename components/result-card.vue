@@ -55,8 +55,8 @@ export default {
           font-weight: bold
 
     .email
-      padding-top: 5px
-      padding-right: 5px
+      padding-top: 10px
+      padding-right: 10px
 
       span
         font-size: 0.8rem
