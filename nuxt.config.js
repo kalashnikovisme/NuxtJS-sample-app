@@ -40,6 +40,8 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/fontawesome',
+    '@nuxtjs/svg',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -71,6 +73,10 @@ export default {
         },
       },
     },
+  },
+
+  fontawesome: {
+    icons: {}
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
