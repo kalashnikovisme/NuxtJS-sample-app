@@ -1,11 +1,15 @@
 <template lang="pug">
   .main
     search-input
-    result-card
+    
+    result-card(
+      v-for="user in this.getCollection"
+      :user="user"
+    )
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
   name: 'IndexPage',
@@ -14,7 +18,10 @@ export default {
   }),
   mounted() {
     this.fetchUsers()
-  }
+  },
+  computed: mapGetters({
+    getCollection: 'users/getCollection',
+  }),
 }
 </script>
 
@@ -24,4 +31,5 @@ export default {
     padding-left: 20px
     padding-right: 20px
     background-color: white
+    overflow-y: scroll
 </style>

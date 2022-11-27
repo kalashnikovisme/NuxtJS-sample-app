@@ -19,7 +19,7 @@ export default {
   .chromeos
     &-bar
       width: 100%
-      height: 32px
+      min-height: 32px
       background-color: #757575
       display: flex
       justify-content: right
