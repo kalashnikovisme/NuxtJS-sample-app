@@ -5,8 +5,16 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'IndexPage',
+  methods: mapActions({
+    fetchUsers: 'users/fetchUsers',
+  }),
+  mounted() {
+    this.fetchUsers()
+  }
 }
 </script>
 
@@ -17,4 +25,3 @@ export default {
     padding-right: 20px
     background-color: white
 </style>
-

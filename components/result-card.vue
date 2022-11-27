@@ -11,7 +11,7 @@
       <div>
         <v-card-title
           class="text-h5"
-          v-text="Supermodel"
+          v-text="`Supermodel`"
         ></v-card-title>
 
         <v-card-subtitle v-text="`Foster the People`"></v-card-subtitle>

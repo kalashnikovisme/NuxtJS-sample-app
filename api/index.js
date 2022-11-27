@@ -1,14 +1,5 @@
-const express = require('express')
-const app = express()
+import users from './users'
 
-const users = require('./users')
-app.use(users)
-
-if (require.main === module) {
-  const port = 3001
-  app.listen(port, () => {
-    console.log(`API server listening on port ${port}`)
-  })
+export default {
+  users
 }
-
-module.exports = app
