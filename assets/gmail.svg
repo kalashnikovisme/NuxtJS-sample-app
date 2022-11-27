@@ -1,0 +1,23 @@
+<svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_1_132" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="18">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.44171 18C0.627136 18 0 17.2023 0 16.5V1.499C0 0.630554 0.855957 0 1.34918 0H22.5C23.329 0 24 0.672 24 1.499V16.5C24 17.329 23.329 18 22.5 18C22.5 18 2.67432 18 1.44171 18Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_1_132)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1 0H21.999V18H1V0Z" fill="#E1E1E1"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.499 0C0.671 0 0 0.672 0 1.499V16.5C0 17.329 0.671 18 1.499 18H2.999V1.499L1.499 0Z" fill="#D23F31"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M24 1.49902L2.99899 18H22.5L24 1.49902Z" fill="#EEEEEE"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20.999 1.499L22.5 0C23.329 0 24 0.672 24 1.499V16.5C24 17.329 23.329 18 22.5 18H20.999V1.499Z" fill="#B93221"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.399994 2.5H24V18H16L0.399994 2.5Z" fill="url(#paint0_radial_1_132)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.999 10.929L22.5 0H1.49899L11.999 10.929Z" fill="#EEEEEE"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.37 2.722C23.751 2.45 24 2.004 24 1.499C24 0.672 23.329 0 22.5 0H22L11.999 7.336L1.999 0H1.499C0.671 0 0 0.672 0 1.499C0 2.004 0.248 2.45 0.629 2.722L11.999 10.929L23.37 2.722Z" fill="#DB4437"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.49902V16.5C0 17.329 0.671 18 1.499 18H2.999H1.499C0.949 18 0 17.052 0 16.5V1.49902Z" fill="#C23A2D"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_1_132" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0.399994 3.47237) rotate(31.249) scale(27.19 24.193)">
+<stop stop-opacity="0.16"/>
+<stop offset="0.3" stop-opacity="0.16"/>
+<stop offset="0.5" stop-opacity="0.09"/>
+<stop offset="1" stop-opacity="0.02"/>
+</radialGradient>
+</defs>
+</svg>

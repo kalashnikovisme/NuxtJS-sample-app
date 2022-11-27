@@ -6,7 +6,6 @@
 <style lang="sass">
   .main
     width: 564px
-    height: 100%
     background-color: white
 </style>
 

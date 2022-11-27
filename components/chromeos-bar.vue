@@ -1,8 +1,8 @@
 <template lang="pug">
-  .chromeos-bar
-    MinimiseIcon(style="margin-top: 8px")
-    MaximiseIcon
-    CloseIcon
+.chromeos-bar
+  MinimiseIcon(style="margin-top: 8px")
+  MaximiseIcon
+  CloseIcon
 </template>
 
 <script>
@@ -19,8 +19,8 @@ export default {
   .chromeos
     &-bar
       width: 100%
-      background-color: #757575
       height: 32px
+      background-color: #757575
       display: flex
       justify-content: right
       align-items: center
