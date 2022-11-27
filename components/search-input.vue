@@ -1,8 +1,21 @@
 <template lang="pug">
 v-text-field(
   prepend-inner-icon="mdi-magnify"
+  @input="search"
 )
 </template>
+
+<script>
+import { mapActions } from 'vuex'
+
+export default {
+  methods: {
+    ...mapActions({
+      'search': 'users/searchUsers',
+    }),
+  }
+}
+</script>
 
 <style lang="sass">
   input
