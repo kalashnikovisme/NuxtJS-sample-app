@@ -1,19 +1,47 @@
 <template lang="pug">
-  v-card
-   .d-flex.flex-no-wrap.justify-space-between
-      v-avatar.ma-3(
-        size="125"
-        tile
-      )
+v-card(
+  style="margin-bottom: 20px"
+)
+  .card-body
+    .main-info
+      .avatar
         v-img(
-          src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
+          :src="user.avatar"
+          width="134px"
+          height="134px"
         )
-      .div
-        v-card-title.text-h5(
-          v-text="`Supermodel`"
-        )
+      .data
+        v-card-title {{ user.name }}
+        v-card-subtitle {{ user.title }}
+    .email
+      span {{ user.email }}
+</template>
 
-        v-card-subtitle(
-          v-text="`Foster the People`"
-        )
- </template>
+<script>
+export default {
+  props: {
+    user: {
+      type: Object,
+      required: true,
+    },
+  },
+}
+</script>
+
+<style lang="sass">
+  .card-body
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+    .main-info
+      display: flex
+      flex-direction: row
+
+    .email
+      padding-top: 5px
+      padding-right: 5px
+
+      span
+        font-size: 0.8rem
+</style>

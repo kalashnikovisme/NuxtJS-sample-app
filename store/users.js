@@ -22,6 +22,8 @@ export const actions = {
   async fetchUsers({ commit }) {
     const res = await api.users()
 
+    console.log(res)
+
     commit('setAllUsers', res.data)
     commit('setCollectionOfUsers', res.data)
   },

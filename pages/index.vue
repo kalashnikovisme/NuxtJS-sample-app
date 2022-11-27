@@ -1,10 +1,11 @@
 <template lang="pug">
   .main
     search-input
-    
+
     result-card(
-      v-for="user in this.getCollection"
+      v-for="(user, index) in this.getCollection"
       :user="user"
+      :key="`user-${index}`"
     )
 </template>
 
