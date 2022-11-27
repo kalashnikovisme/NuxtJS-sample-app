@@ -13,6 +13,11 @@ v-card(
       .data
         v-card-title {{ user.name }}
         v-card-subtitle {{ user.title }}
+        v-card-actions
+          v-btn(
+            text
+            color="#009688"
+          ) Mark as suitable
     .email
       span {{ user.email }}
 </template>
