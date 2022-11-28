@@ -80,7 +80,9 @@ export default {
   },
 
   fontawesome: {
-    icons: {}
+    icons: {
+      solid: ['faSpinner']
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

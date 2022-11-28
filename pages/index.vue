@@ -7,6 +7,10 @@
       :user="user"
       :key="`user-${index}`"
     )
+
+    font-awesome-icon(
+      :icon=['fas', 'spinner']
+    )
 </template>
 
 <script>
@@ -14,9 +18,11 @@ import { mapActions, mapGetters } from 'vuex'
 
 export default {
   name: 'IndexPage',
-  methods: mapActions({
-    fetchUsers: 'users/fetchUsers',
-  }),
+  methods: {
+    ...mapActions({
+      fetchUsers: 'users/fetchUsers',
+    }),
+  },
   mounted() {
     this.fetchUsers()
   },
@@ -33,6 +39,8 @@ export default {
     padding-right: 20px
     background-color: white
     overflow-y: scroll
+    justify-content: center
+
     &::-webkit-scrollbar
       width: 4px
 
