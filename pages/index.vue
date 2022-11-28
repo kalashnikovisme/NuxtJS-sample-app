@@ -20,6 +20,13 @@ import { mapActions, mapGetters } from 'vuex'
 
 export default {
   name: 'IndexPage',
+  computed: mapGetters({
+    getShowenCollection: 'users/getShowenCollection',
+    isLastPage: 'users/isLastPage',
+  }),
+  mounted() {
+    this.fetchUsers(this.$route.params.query)
+  },
   methods: {
     ...mapActions({
       fetchUsers: 'users/fetchUsers',
@@ -30,13 +37,6 @@ export default {
       this.paginateUsers()
     },
   },
-  mounted() {
-    this.fetchUsers(this.$route.params.query)
-  },
-  computed: mapGetters({
-    getShowenCollection: 'users/getShowenCollection',
-    isLastPage: 'users/isLastPage',
-  }),
 }
 </script>
 
