@@ -12,6 +12,6 @@ module.exports = {
   plugins: [],
   // add your custom rules here
   rules: {
-    "vue/no-v-text-v-html-on-component": "off"
+    'vue/no-v-text-v-html-on-component': 'off',
   },
 }

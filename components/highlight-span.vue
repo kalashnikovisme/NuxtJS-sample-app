@@ -13,12 +13,12 @@ export default {
   props: {
     text: {
       type: String,
-      required: true
+      required: true,
     },
     query: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   computed: {
     textToMark() {
@@ -30,7 +30,10 @@ export default {
   methods: {
     toMark(index) {
       if (this.textToMark) {
-        return index >= this.textToMark.index && index <= (this.textToMark.index + this.textToMark[0].length - 1)
+        return (
+          index >= this.textToMark.index &&
+          index <= this.textToMark.index + this.textToMark[0].length - 1
+        )
       }
 
       return false

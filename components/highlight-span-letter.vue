@@ -9,11 +9,11 @@ export default {
   props: {
     letter: {
       type: String,
-      required: true
+      required: true,
     },
     toMark: {
       type: Boolean,
-      required: true
+      required: true,
     },
   },
   updated() {

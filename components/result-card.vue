@@ -51,45 +51,45 @@ export default {
     }
   },
   computed: mapGetters({
-    'query': 'users/searchQuery',
+    query: 'users/searchQuery',
   }),
   methods: {
     toggle() {
       this.selected = !this.selected
-    }
+    },
   },
 }
 </script>
 
 <style lang="sass">
-  .card-body
+.card-body
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  text-align: left
+  border: 1px solid transparent
+
+  &.selected
+    border: 1px solid #4765FF
+
+  .main-info
     display: flex
     flex-direction: row
-    justify-content: space-between
-    text-align: left
-    border: 1px solid transparent
 
-    &.selected
-      border: 1px solid #4765FF
-
-    .main-info
+    .data
       display: flex
-      flex-direction: row
+      flex-direction: column
 
-      .data
-        display: flex
-        flex-direction: column
-
-        .title, .address
-          padding-left: 16px
-          font-size: 0.8rem
-        .title
-          font-weight: bold
-
-    .email
-      padding-top: 10px
-      padding-right: 10px
-
-      span
+      .title, .address
+        padding-left: 16px
         font-size: 0.8rem
+      .title
+        font-weight: bold
+
+  .email
+    padding-top: 10px
+    padding-right: 10px
+
+    span
+      font-size: 0.8rem
 </style>

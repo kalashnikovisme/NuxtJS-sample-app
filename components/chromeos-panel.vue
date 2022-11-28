@@ -38,30 +38,30 @@ export default {
     BatteryIcon,
     AvatarIcon,
   },
-};
+}
 </script>
 
 <style lang="sass">
-  .chromeos
-    &-panel
-      width: 100%
-      height: 56px
-      background-color: #262626
-      padding-top: 16px
-      padding-bottom: 16px
+.chromeos
+  &-panel
+    width: 100%
+    height: 56px
+    background-color: #262626
+    padding-top: 16px
+    padding-bottom: 16px
+    display: flex
+    justify-content: space-between
+    padding-left: 18px
+    padding-right: 18px
+    margin-top: 65px
+
+    *:not(:first-child)
+      margin-left: 32px
+
+    .apps, .tray
       display: flex
-      justify-content: space-between
-      padding-left: 18px
-      padding-right: 18px
-      margin-top: 65px
+      align-items: center
 
-      *:not(:first-child)
-        margin-left: 32px
-
-      .apps, .tray
-        display: flex
-        align-items: center
-
-      span.time
-        color: white
+    span.time
+      color: white
 </style>

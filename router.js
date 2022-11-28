@@ -17,6 +17,6 @@ export function createRouter() {
         path: '/search/:query',
         component: Index,
       },
-    ]
+    ],
   })
 }

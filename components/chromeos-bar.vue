@@ -12,20 +12,20 @@ import MaximiseIcon from '~/assets/maximise.svg?inline'
 
 export default {
   components: { CloseIcon, MinimiseIcon, MaximiseIcon },
-};
+}
 </script>
 
 <style lang="sass">
-  .chromeos
-    &-bar
-      width: 100%
-      min-height: 32px
-      background-color: #757575
-      display: flex
-      justify-content: right
-      align-items: center
-      margin-bottom: 54px
+.chromeos
+  &-bar
+    width: 100%
+    min-height: 32px
+    background-color: #757575
+    display: flex
+    justify-content: right
+    align-items: center
+    margin-bottom: 54px
 
-      *
-        margin-right: 14px   
+    *
+      margin-right: 14px
 </style>

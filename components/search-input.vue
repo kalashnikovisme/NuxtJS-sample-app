@@ -18,14 +18,14 @@ export default {
       history.pushState({}, null, `/search/${query}`)
       this.searchUsers(query)
     },
-  }
+  },
 }
 </script>
 
 <style lang="sass">
-  input
-    width: 100%    
-    height: 48px
-    padding-left: 21px
-    padding-top: 17px
+input
+  width: 100%
+  height: 48px
+  padding-left: 21px
+  padding-top: 17px
 </style>

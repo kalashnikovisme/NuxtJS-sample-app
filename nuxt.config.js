@@ -12,9 +12,7 @@ export default {
   },
 
   generate: {
-    routes: [
-      '/'
-    ]
+    routes: ['/'],
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -88,8 +86,8 @@ export default {
 
   fontawesome: {
     icons: {
-      solid: ['faSpinner']
-    }
+      solid: ['faSpinner'],
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -98,10 +96,10 @@ export default {
   googleFonts: {
     families: {
       Roboto: true,
-    }
+    },
   },
 
   routerModule: {
-    keepDefaultRouter: true
+    keepDefaultRouter: true,
   },
 }
