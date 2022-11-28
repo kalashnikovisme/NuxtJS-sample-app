@@ -40,7 +40,11 @@ export const mutations = {
     }
 
     state.collection = _.filter(state.users, (user) => {
-      return user.name.includes(query) || user.address.includes(query) || user.title.includes(query) || user.email.includes(query)
+      const attributesList = ['name', 'address', 'title', 'email']
+
+      return attributesList.map((attribute) => {
+        return user[attribute].toLowerCase().includes(query.toLowerCase())
+      }).includes(true)
     })
     state.showenCollection = state.collection.slice(0, perPage * state.currentPage)
   },
