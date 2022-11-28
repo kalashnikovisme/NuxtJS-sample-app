@@ -28,15 +28,17 @@ export const mutations = {
     state.showenCollection = state.collection.slice(0, perPage * state.currentPage)
   },
   filterUsers(state, query) {
+    state.currentPage = 1
+
     if (_.isEmpty(query)) {
       state.collection = state.users
+      state.showenCollection = state.collection.slice(0, perPage * state.currentPage)
       return
     }
 
     state.collection = _.filter(state.users, (user) => {
       return user.name.includes(query) || user.address.includes(query) || user.title.includes(query) || user.email.includes(query)
     })
-    state.currentPage = 1
     state.showenCollection = state.collection.slice(0, perPage * state.currentPage)
   },
 }
