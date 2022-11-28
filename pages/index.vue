@@ -3,13 +3,14 @@
     search-input
 
     result-card(
-      v-for="(user, index) in this.getCollection"
+      v-for="(user, index) in this.getShowenCollection"
       :user="user"
       :key="`user-${index}`"
     )
 
     font-awesome-icon.spinner(
       :icon=['fas', 'spinner']
+      v-intersect="onIntersect"
     )
 </template>
 
@@ -21,13 +22,17 @@ export default {
   methods: {
     ...mapActions({
       fetchUsers: 'users/fetchUsers',
+      paginateUsers: 'users/paginateUsers',
     }),
+    onIntersect() {
+      this.paginateUsers()
+    },
   },
   mounted() {
     this.fetchUsers()
   },
   computed: mapGetters({
-    getCollection: 'users/getCollection',
+    getShowenCollection: 'users/getShowenCollection',
   }),
 }
 </script>
@@ -39,6 +44,7 @@ export default {
     padding-right: 20px
     background-color: white
     overflow-y: scroll
+    overflow-x: hidden
     justify-content: center
     text-align: center
 

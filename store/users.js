@@ -1,13 +1,17 @@
 import _ from 'underscore'
 import api from '~/api'
 
+const perPage = 10
+
 export const state = () => ({
   users: [],
   collection: [],
+  showenCollection: [],
+  currentPage: 1,
 })
 
 export const getters = {
-  getCollection: state => state.collection.slice(0, 10),
+  getShowenCollection: state => state.showenCollection,
 }
 
 export const mutations = {
@@ -16,6 +20,12 @@ export const mutations = {
   },
   setCollectionOfUsers(state, collection) {
     state.collection = collection
+    state.currentPage = 1
+    state.showenCollection = state.collection.slice(0, perPage * state.currentPage)
+  },
+  showOneMorePage(state, page) {
+    state.currentPage = state.currentPage + 1
+    state.showenCollection = state.collection.slice(0, perPage * state.currentPage)
   },
   filterUsers(state, query) {
     if (_.isEmpty(query)) {
@@ -26,6 +36,8 @@ export const mutations = {
     state.collection = _.filter(state.users, (user) => {
       return user.name.includes(query) || user.address.includes(query) || user.title.includes(query) || user.email.includes(query)
     })
+    state.currentPage = 1
+    state.showenCollection = state.collection.slice(0, perPage * state.currentPage)
   },
 }
 
@@ -39,4 +51,7 @@ export const actions = {
   async searchUsers({ commit }, query) {
     await commit('filterUsers', query)
   },
+  async paginateUsers({ commit }, page) {
+    await commit('showOneMorePage', page)
+  }
 }
