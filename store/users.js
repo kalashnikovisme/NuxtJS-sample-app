@@ -8,13 +8,15 @@ export const state = () => ({
   collection: [],
   showenCollection: [],
   currentPage: 1,
+  query: null,
 })
 
 export const getters = {
   getShowenCollection: state => state.showenCollection,
   isLastPage: (state) => {
     return state.collection.length <= perPage * state.currentPage
-  }
+  },
+  searchQuery: state => state.query,
 }
 
 export const mutations = {
@@ -31,6 +33,7 @@ export const mutations = {
     state.showenCollection = state.collection.slice(0, perPage * state.currentPage)
   },
   filterUsers(state, query) {
+    state.query = query
     state.currentPage = 1
 
     if (_.isEmpty(query)) {

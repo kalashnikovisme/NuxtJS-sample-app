@@ -11,9 +11,12 @@ v-card(
           height="134px"
         )
       .data
-        v-card-title(style="padding-bottom: 0px") {{ user.name }}
-        span.title {{ user.title }}
-        span.address {{ user.address }}
+        v-card-title(style="padding-bottom: 0px")
+          highlight-span(:text="user.name", :query="query")
+        span.title
+          highlight-span(:text="user.title", :query="query")
+        span.address
+          highlight-span(:text="user.address", :query="query")
         v-card-actions
           v-btn(
             text
@@ -28,10 +31,13 @@ v-card(
             @click="toggle"
           ) Skip selection
     .email
-      span {{ user.email }}
+      span
+        highlight-span(:text="user.email", :query="query")
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   props: {
     user: {
@@ -49,6 +55,9 @@ export default {
       this.selected = !this.selected
     }
   },
+  computed: mapGetters({
+    'query': 'users/searchQuery',
+  })
 }
 </script>
 
