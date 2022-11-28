@@ -12,8 +12,12 @@ import { mapActions } from 'vuex'
 export default {
   methods: {
     ...mapActions({
-      search: 'users/searchUsers',
+      searchUsers: 'users/searchUsers',
     }),
+    search(query) {
+      history.pushState({}, null, `/search/${query}`)
+      this.searchUsers(query)
+    },
   }
 }
 </script>
