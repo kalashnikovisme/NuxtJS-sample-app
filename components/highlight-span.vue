@@ -20,21 +20,20 @@ export default {
       required: true
     }
   },
-  methods: {
-    toMark(index) {
-      if (this.textToMark) {
-        console.log(this.textToMark[0])
-        return index >= this.textToMark.index && index <= (this.textToMark.index + this.textToMark[0].length - 1)
-      }
-
-      return false
-    },
-  },
   computed: {
     textToMark() {
       const regex = new RegExp(this.query)
 
       return regex.exec(this.text)
+    },
+  },
+  methods: {
+    toMark(index) {
+      if (this.textToMark) {
+        return index >= this.textToMark.index && index <= (this.textToMark.index + this.textToMark[0].length - 1)
+      }
+
+      return false
     },
   },
 }

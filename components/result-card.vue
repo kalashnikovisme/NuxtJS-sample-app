@@ -50,14 +50,14 @@ export default {
       selected: false,
     }
   },
+  computed: mapGetters({
+    'query': 'users/searchQuery',
+  })
   methods: {
     toggle() {
       this.selected = !this.selected
     }
   },
-  computed: mapGetters({
-    'query': 'users/searchQuery',
-  })
 }
 </script>
 
