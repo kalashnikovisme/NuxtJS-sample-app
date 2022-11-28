@@ -2,7 +2,7 @@
 v-card(
   style="margin-bottom: 20px"
 )
-  .card-body
+  .card-body(:class="selected ? 'selected' : ''")
     .main-info
       .avatar
         v-img(
@@ -18,7 +18,15 @@ v-card(
           v-btn(
             text
             color="#009688"
+            v-if="!selected"
+            @click="toggle"
           ) Mark as suitable
+          v-btn(
+            text
+            color="#009688"
+            v-if="selected"
+            @click="toggle"
+          ) Skip selection
     .email
       span {{ user.email }}
 </template>
@@ -31,6 +39,16 @@ export default {
       required: true,
     },
   },
+  data() {
+    return {
+      selected: false,
+    }
+  },
+  methods: {
+    toggle() {
+      this.selected = !this.selected
+    }
+  },
 }
 </script>
 
@@ -40,6 +58,10 @@ export default {
     flex-direction: row
     justify-content: space-between
     text-align: left
+    border: 1px solid transparent
+
+    &.selected
+      border: 1px solid #4765FF
 
     .main-info
       display: flex
