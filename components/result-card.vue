@@ -52,7 +52,7 @@ export default {
   },
   computed: mapGetters({
     'query': 'users/searchQuery',
-  })
+  }),
   methods: {
     toggle() {
       this.selected = !this.selected
