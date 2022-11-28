@@ -22,9 +22,13 @@ export default {
   },
   computed: {
     textToMark() {
-      const regex = new RegExp(this.query)
+      if (this.query) {
+        const regex = new RegExp(this.query.toLowerCase())
 
-      return regex.exec(this.text)
+        return regex.exec(this.text.toLowerCase())
+      }
+
+      return null
     },
   },
   methods: {
