@@ -12,6 +12,9 @@ export const state = () => ({
 
 export const getters = {
   getShowenCollection: state => state.showenCollection,
+  isLastPage: (state) => {
+    return state.collection.length <= perPage * state.currentPage
+  }
 }
 
 export const mutations = {

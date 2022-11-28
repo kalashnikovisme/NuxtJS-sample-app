@@ -9,6 +9,7 @@
     )
 
     font-awesome-icon.spinner(
+      v-if="!isLastPage"
       :icon=['fas', 'spinner']
       v-intersect="onIntersect"
     )
@@ -34,6 +35,7 @@ export default {
   },
   computed: mapGetters({
     getShowenCollection: 'users/getShowenCollection',
+    isLastPage: 'users/isLastPage',
   }),
 }
 </script>
