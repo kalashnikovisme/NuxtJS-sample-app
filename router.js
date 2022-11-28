@@ -14,6 +14,10 @@ export function createRouter() {
         component: Index,
       },
       {
+        path: '/search',
+        component: Index,
+      },
+      {
         path: '/search/:query',
         component: Index,
       },
