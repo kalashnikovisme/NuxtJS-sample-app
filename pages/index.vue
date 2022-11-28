@@ -8,7 +8,7 @@
       :key="`user-${index}`"
     )
 
-    font-awesome-icon(
+    font-awesome-icon.spinner(
       :icon=['fas', 'spinner']
     )
 </template>
@@ -40,6 +40,7 @@ export default {
     background-color: white
     overflow-y: scroll
     justify-content: center
+    text-align: center
 
     &::-webkit-scrollbar
       width: 4px
@@ -51,4 +52,16 @@ export default {
       border-radius: 2px
       background: black
       -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.5)
+
+    .spinner
+      animation-name: spin
+      animation-duration: 1000ms
+      animation-iteration-count: infinite
+      animation-timing-function: linear
+
+  @keyframes spin
+    from
+      transform: rotate(0deg)
+    to
+      transform: rotate(360deg)
 </style>
