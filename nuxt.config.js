@@ -11,6 +11,12 @@ export default {
     '/api': '~/api',
   },
 
+  generate: {
+    routes: [
+      '/'
+    ]
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - bravado_frontend_assessment',
@@ -46,6 +52,7 @@ export default {
     '@nuxtjs/vuetify',
     '@nuxtjs/fontawesome',
     '@nuxtjs/svg',
+    '@nuxtjs/router',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
