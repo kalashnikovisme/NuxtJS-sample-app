@@ -23,13 +23,14 @@ export default {
     ...mapActions({
       fetchUsers: 'users/fetchUsers',
       paginateUsers: 'users/paginateUsers',
+      search: 'users/searchUsers',
     }),
     onIntersect() {
       this.paginateUsers()
     },
   },
   mounted() {
-    this.fetchUsers()
+    this.fetchUsers(this.$route.params.query)
   },
   computed: mapGetters({
     getShowenCollection: 'users/getShowenCollection',

@@ -44,11 +44,14 @@ export const mutations = {
 }
 
 export const actions = {
-  async fetchUsers({ commit }) {
+  async fetchUsers({ commit }, query = null) {
     const res = await api.users()
 
     commit('setAllUsers', res.data)
     commit('setCollectionOfUsers', res.data)
+    if (!(_.isEmpty(query))) {
+      commit('filterUsers', query)
+    }
   },
   async searchUsers({ commit }, query) {
     await commit('filterUsers', query)

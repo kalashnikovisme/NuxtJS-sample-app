@@ -2,6 +2,7 @@
 v-text-field(
   prepend-inner-icon="mdi-magnify"
   @input="search"
+  :value="this.$route.params.query"
 )
 </template>
 
@@ -11,7 +12,7 @@ import { mapActions } from 'vuex'
 export default {
   methods: {
     ...mapActions({
-      'search': 'users/searchUsers',
+      search: 'users/searchUsers',
     }),
   }
 }

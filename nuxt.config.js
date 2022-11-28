@@ -99,5 +99,9 @@ export default {
     families: {
       Roboto: true,
     }
-  }
+  },
+
+  routerModule: {
+    keepDefaultRouter: true
+  },
 }
