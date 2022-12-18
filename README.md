@@ -1,4 +1,4 @@
-# bravado_frontend_assessment
+# Nuxt JS sample app
 
 ## Build Setup
 
